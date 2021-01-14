@@ -1,0 +1,28 @@
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/random);">
+
+  <div class="container">
+    <div class="d-flex justify-content-center""
+          <h1><strong>Your Favourite Restaurants!</strong>!</h1>
+    <%= link_to "Add a new restaurant!", new_restaurant_path %>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="container">
+  </div>
+  <% @restaurants.each do |restaurant| %>
+    <div class="card d-flex ">
+      <div class="row align-items-center justify-content-center">
+        <h3><%= restaurant.name %> - <%= restaurant.category.capitalize %></h3>
+        <h3><%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary m-3" %></h3>
+      </div>
+    </div>
+  <% end %>
+</div>
+</div>
+
+
